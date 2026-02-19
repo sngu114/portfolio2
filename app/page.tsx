@@ -165,7 +165,7 @@ export default function Home() {
 
       {/* FOOTER */}
       <footer className="py-12 text-center text-slate-400 border-t border-slate-100 mt-12">
-        <p>© {new Date().getFullYear()} Steven Nguyen</p>
+        <p>© {new Date().getFullYear()} Steven Nguyen. Last Updated: 2026.</p>
       </footer>
 
     </main>
