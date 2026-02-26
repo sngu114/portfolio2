@@ -5,6 +5,17 @@ import { useState } from 'react';
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const certifications = [
+    {
+      title: "Generative AI with Diffusion Models",
+      organization: "Nvidia",
+      status: "In Progress",
+      image: "/nvidia.png", // Ensure you have this image in your public folder
+      description: "In this course, learners will take a deeper dive into denoising diffusion models, which are a popular choice for text-to-image pipelines"
+    },
+    
+  ];
+
   const projects = [
     { 
       title: "AI Animal and Species Identifier", 
@@ -47,7 +58,8 @@ export default function Home() {
       image: "/eproject2.jpg", 
       link: "https://www.youtube.com/watch?v=URf6mlNETMw", 
       linkText: "View Demonstration Video",
-      isVideo: true 
+      isVideo: true,
+      githubLink: "https://github.com/sngu114/PDM2025"
     },
     { 
       title: "Pesto: Judgement Day (Unity2D Platformer Game)", 
@@ -70,23 +82,20 @@ export default function Home() {
   const navLinks = [
     { name: 'Home', href: '#hero' },
     { name: 'Education', href: '#education' },
+    { name: 'Certificates', href: '#certificates' },
     { name: 'Projects', href: '#projects' },
     { name: 'Game Projects', href: '#elective-projects' },
     { name: 'Contact', href: '#contact' },
   ];
 
-  // CLEANED UP ICONS
   const SocialIcons = () => (
     <>
-      {/* Resume */}
       <a href="/Steven Nguyen Resume 12-19-25.pdf" target="_blank" className="text-slate-400 hover:text-orange-600 transition-colors" title="Resume">
         <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" /></svg>
       </a>
-      {/* LinkedIn */}
       <a href="https://www.linkedin.com/in/steven-nguyen-a7017132a/" target="_blank" className="text-slate-400 hover:text-orange-600 transition-colors" title="LinkedIn">
         <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
       </a>
-      {/* GitHub - Standard Path */}
       <a href="https://github.com/sngu114" target="_blank" className="text-slate-400 hover:text-orange-600 transition-colors" title="GitHub">
         <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12" /></svg>
       </a>
@@ -101,7 +110,6 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <div className="text-xl font-bold tracking-tighter text-orange-600">Steven Nguyen</div>
-            {/* Desktop Socials */}
             <div className="hidden sm:flex items-center gap-3 border-l pl-4 border-slate-200">
               <SocialIcons />
             </div>
@@ -120,7 +128,6 @@ export default function Home() {
           </button>
         </div>
 
-        {/* Mobile Hamburger Menu */}
         {isMenuOpen && (
           <div className="md:hidden bg-white border-b border-slate-100 px-6 py-6 flex flex-col gap-6 text-sm font-medium text-slate-600 shadow-lg animate-in slide-in-from-top duration-300">
             <div className="flex items-center gap-6 pb-4 border-b border-slate-100">
@@ -169,6 +176,33 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CERTIFICATES SECTION */}
+      <section id="certificates" className="max-w-4xl mx-auto px-6 py-20 border-t border-slate-50">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-2">Certifications</h2>
+          <div className="h-1 w-16 bg-orange-600 mx-auto rounded-full"></div>
+        </div>
+        <div className="flex flex-col gap-6">
+          {certifications.map((cert, index) => (
+            <div key={index} className="bg-slate-50 border border-slate-200 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-8 shadow-sm transition-all duration-300 hover:scale-[1.01]">
+              <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shrink-0 border border-slate-100 overflow-hidden p-3">
+                <img src={cert.image} alt={cert.organization} className="w-full h-full object-contain" />
+              </div>
+              <div className="text-center md:text-left flex-grow">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-900">{cert.title}</h3>
+                  <span className="inline-block px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-xs font-bold uppercase tracking-wider w-fit mx-auto md:mx-0">
+                    Status: {cert.status}
+                  </span>
+                </div>
+                <p className="text-orange-600 font-semibold text-base md:text-lg">{cert.organization}</p>
+                <p className="mt-3 text-slate-600 leading-relaxed text-sm md:text-base">{cert.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* PROJECTS SECTION */}
       <section id="projects" className="max-w-6xl mx-auto px-6 py-24 border-t border-slate-50">
         <div className="text-center mb-16">
@@ -213,16 +247,28 @@ export default function Home() {
               <div className="p-6 md:p-8 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold mb-3 group-hover:text-orange-600 transition-colors">{project.title}</h3>
                 <p className="text-sm text-slate-500 mb-6 leading-relaxed flex-grow">{project.description}</p>
-                <a href={project.link} target="_blank" className="inline-flex items-center gap-2 font-semibold text-orange-600 hover:text-orange-700 transition-colors">
-                  {project.linkText || "View Project"}
-                  {project.isItch ? (
-                    <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M3.504 3C2.124 3 1.002 4.122 1.002 5.504v13.018l4.498-4.508h14.996c1.38 0 2.502-1.122 2.502-2.504V5.504C22.998 4.122 21.876 3 20.496 3H3.504zM8.502 6c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm7 0c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-5 5h3c.552 0 1 .448 1 1s-.448 1-1 1h-3c-.552 0-1-.448-1-1s.448-1 1-1z"/></svg>
-                  ) : project.isVideo ? (
-                    <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M21,12L9,21V3L21,12M7,3V21H5V3H7Z" /></svg>
-                  ) : (
-                    <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12" /></svg>
+                
+                {/* Updated link container to support multiple links */}
+                <div className="flex flex-wrap gap-4 mt-auto">
+                  <a href={project.link} target="_blank" className="inline-flex items-center gap-2 font-semibold text-orange-600 hover:text-orange-700 transition-colors">
+                    {project.linkText || "View Project"}
+                    {project.isItch ? (
+                      <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M3.504 3C2.124 3 1.002 4.122 1.002 5.504v13.018l4.498-4.508h14.996c1.38 0 2.502-1.122 2.502-2.504V5.504C22.998 4.122 21.876 3 20.496 3H3.504zM8.502 6c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm7 0c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-5 5h3c.552 0 1 .448 1 1s-.448 1-1 1h-3c-.552 0-1-.448-1-1s.448-1 1-1z"/></svg>
+                    ) : project.isVideo ? (
+                      <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M21,12L9,21V3L21,12M7,3V21H5V3H7Z" /></svg>
+                    ) : (
+                      <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12" /></svg>
+                    )}
+                  </a>
+
+                  {/* Secondary GitHub link (specifically for Cheesy Scavenger) */}
+                  {project.githubLink && (
+                    <a href={project.githubLink} target="_blank" className="inline-flex items-center gap-2 font-semibold text-orange-600 hover:text-orange-700 transition-colors">
+                      View Project
+                      <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12" /></svg>
+                    </a>
                   )}
-                </a>
+                </div>
               </div>
             </div>
           ))}
