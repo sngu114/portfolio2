@@ -348,7 +348,7 @@ export default function Home() {
       </section>
 
       <footer className="py-12 text-center text-slate-400 border-t border-slate-100">
-        <p className="text-xs md:text-sm">© {new Date().getFullYear()} Steven Nguyen. Last Updated: 2/25/26.</p>
+        <p className="text-xs md:text-sm">© {new Date().getFullYear()} Steven Nguyen. Last Updated: 2/26/26.</p>
       </footer>
     </main>
   );
