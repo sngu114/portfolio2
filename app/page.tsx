@@ -10,10 +10,21 @@ export default function Home() {
       title: "Generative AI with Diffusion Models",
       organization: "Nvidia",
       status: "In Progress",
-      image: "/nvidia.png", // Ensure you have this image in your public folder
+      image: "/nvidia.png", 
       description: "In this course, learners will take a deeper dive into denoising diffusion models, which are a popular choice for text-to-image pipelines"
     },
-    
+  ];
+
+  // --- VOLUNTEERING DATA ---
+  const volunteering = [
+    {
+      role: "Volunteer",
+      organization: "St. Anthony Catholic Church",
+      image: "/church.png",
+      location: "Baton Rouge, Louisiana",
+      date: "Present",
+      description: "Assisted with event setup and cleanup for church gatherings, services, and special events. "
+    }
   ];
 
   const projects = [
@@ -93,6 +104,7 @@ export default function Home() {
     { name: 'Certificates', href: '#certificates' },
     { name: 'Projects', href: '#projects' },
     { name: 'Game Projects', href: '#elective-projects' },
+    { name: 'Volunteering', href: '#volunteering' }, // Added to Nav
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -291,6 +303,32 @@ export default function Home() {
                     </a>
                   )}
                 </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* VOLUNTEERING SECTION */}
+      <section id="volunteering" className="max-w-4xl mx-auto px-6 py-20 border-t border-slate-50">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-2">Volunteering</h2>
+          <div className="h-1 w-16 bg-orange-600 mx-auto rounded-full"></div>
+        </div>
+        <div className="flex flex-col gap-6">
+          {volunteering.map((item, index) => (
+            <div key={index} className="bg-slate-50 border border-slate-200 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-8 shadow-sm transition-all duration-300 hover:scale-[1.01]">
+              <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shrink-0 border border-slate-100 overflow-hidden p-3">
+                <img src={item.image} alt={item.organization} className="w-full h-full object-contain" />
+              </div>
+              <div className="text-center md:text-left flex-grow">
+                <h3 className="text-xl md:text-2xl font-bold text-slate-900">{item.role}</h3>
+                <p className="text-orange-600 font-semibold text-base md:text-lg">{item.organization}</p>
+                <div className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-1 mt-2 text-slate-500 text-sm">
+                  <span>📍 {item.location}</span>
+                  <span>📅 {item.date}</span>
+                </div>
+                <p className="mt-3 text-slate-600 leading-relaxed text-sm md:text-base">{item.description}</p>
               </div>
             </div>
           ))}
