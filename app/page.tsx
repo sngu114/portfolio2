@@ -44,7 +44,7 @@ export default function Home() {
       title: "Gym Management Database System", 
       description: "Developed a Gym Management System to streamline operations for a medium-sized fitness center. Designed a relational database to manage members, trainers, classes, enrollments, and payments, and built Python-based interfaces for member management and reporting.", 
       image: "/project3.png", 
-      link: "https://drive.google.com/file/d/16-fXr1zefPTu-bICMGqaP0_jfAnzdf-s/view?usp=sharing" 
+      link: "https://github.com/nathsoto1/gym-database" 
     },
     { 
       title: "Simple GUI Chat Application", 
@@ -191,7 +191,7 @@ export default function Home() {
               <span>📍 Baton Rouge, LA</span>
               <span>📅 Expected Graduation: May 2026</span>
             </div>
-            <p className="mt-4 text-slate-600 leading-relaxed text-sm md:text-base">Relevant Coursework: AI, Systems Programming, Object Oriented Design, Operating Systems, Database Systems, Advanced Data Structures, Software Quality & Testing, and Cloud Fundamentals.</p>
+            <p className="mt-4 text-slate-600 leading-relaxed text-sm md:text-base">Relevant Coursework: Artificial Intelligence, Systems Programming, Object Oriented Design, Operating Systems, Database Systems, Advanced Data Structures, Software Quality & Testing, and Cloud Fundamentals.</p>
           </div>
         </div>
       </section>
