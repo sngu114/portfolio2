@@ -72,7 +72,7 @@ export default function Home() {
 
   const electiveProjects = [
     { 
-      title: "Future Fugitive (3D Platformer Game)", 
+      title: "Future Fugitive (Godot 2D Platformer Game)", 
       description: "3D platformer built using the Godot Engine and developed in C#. The game focuses on object-oriented design principles to create modular, reusable, and maintainable systems for player movement, physics interactions, and level mechanics.", 
       image: "/futurefugitive.gif", 
       link: "https://github.com/CSC-3380-Spring-2024/Team-6" 
@@ -197,7 +197,7 @@ export default function Home() {
               <span>📍 Baton Rouge, LA</span>
               <span>📅 Expected Graduation: May 2026</span>
             </div>
-            <p className="mt-4 text-slate-600 leading-relaxed text-sm md:text-base">Relevant Coursework: Artificial Intelligence, Systems Programming, Object Oriented Design, Operating Systems, Database Systems, Advanced Data Structures, Software Quality & Testing, and Cloud Fundamentals.</p>
+            <p className="mt-4 text-slate-600 leading-relaxed text-sm md:text-base"><span className="font-semibold">Relevant Coursework:</span> Artificial Intelligence, Systems Programming, Object Oriented Design, Operating Systems, Database Systems, Advanced Data Structures, Software Quality & Testing, and Cloud Fundamentals.</p>
           </div>
         </div>
       </section>
