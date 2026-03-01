@@ -75,7 +75,7 @@ export default function Home() {
       description: "My first portfolio website. Helped me with the basics. Made with HTML, CSS, and JS. Deployed on Netlify.", 
       image: "/project5.png", 
       link: "https://github.com/sngu114/html-css-js-portfolio-website", 
-      websiteLink: "https://stevennguyenportfolio.netlify.app/#about", 
+      websiteLink: "https://stevennguyenportfolio.netlify.app/", 
       isDualLink: true 
     },
   ];
