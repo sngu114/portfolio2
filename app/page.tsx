@@ -20,10 +20,10 @@ export default function Home() {
     {
       role: "Volunteer",
       organization: "St. Anthony Catholic Church",
-      image: "/church.png",
+      image: "/church.PNG",
       location: "Baton Rouge, Louisiana",
       date: "Present",
-      description: "Assisted with event setup and cleanup for church gatherings, services, and special events. "
+      description: "Assisted with event setup and cleanup for church gatherings, services, and special events (Weddings, Funerals, Sunday School). "
     }
   ];
 
