@@ -29,6 +29,12 @@ export default function Home() {
 
   const projects = [
     { 
+      title: "Vigiloo", 
+      description: "Senior Capstone Project. An easy to use cybersecurity educational platform for non-technical users. Our solution will be an interactive learning application that simplifies cybersecurity concepts and presents them in a clear, engaging, and practical way. The platform will feature gamified learning courses, real world scam simulation, and tools to assist users on recognizing scams. ", 
+      image: "/vigiloLOGO2.png", 
+      link: "https://github.com/sngu114/Vigiloo" 
+    },
+    { 
       title: "AI Animal and Species Identifier", 
       description: "Developed and deployed a multimodal animal species classification web application that identifies 854 species using image data and geospatial/temporal metadata. The system integrates a pretrained ConvNeXt Convolutional Network (CNN) with a late-fusion architecture, applies robust data augmentation to handle limited labeled data, and delivers real-time top-5 predictions with confidence scores.", 
       image: "/project1.jpg", 
@@ -104,7 +110,7 @@ export default function Home() {
     { name: 'Certificates', href: '#certificates' },
     { name: 'Projects', href: '#projects' },
     { name: 'Game Projects', href: '#elective-projects' },
-    { name: 'Volunteering', href: '#volunteering' }, // Added to Nav
+    { name: 'Volunteering', href: '#volunteering' }, 
     { name: 'Contact', href: '#contact' },
   ];
 
