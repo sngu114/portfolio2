@@ -49,13 +49,13 @@ export default function Home() {
     { 
       title: "Gym Management Database System", 
       description: "Developed a Gym Management System to streamline operations for a medium-sized fitness center. Designed a relational database to manage members, trainers, classes, enrollments, and payments, and built Python-based interfaces for member management and reporting.", 
-      image: "/project3.png", 
+      image: "/project3.PNG", 
       link: "https://github.com/nathsoto1/gym-database" 
     },
     { 
       title: "Simple GUI Chat Application", 
       description: "Complete web-based GUI chat application using Flask, Python Sockets and SQLite.", 
-      image: "/project4.png", 
+      image: "/project4.PNG", 
       link: "https://www.youtube.com/watch?v=URf6mlNETMw",
       linkText: "View Explanation Video",
       isVideo: true 
