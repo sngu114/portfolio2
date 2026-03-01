@@ -176,7 +176,7 @@ export default function Home() {
           <img src="/me.jpg" alt="Steven Nguyen" className="object-cover w-full h-full" />
         </div>
         <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Hi, I'm <span className="text-orange-600">Steven</span></h1>
-        <p className="max-w-lg text-base md:text-lg text-slate-600 mb-10 leading-relaxed">I'm a <span className="font-semibold">Computer Science: Software Engineering</span> senior at Louisiana State University.</p>
+        <p className="max-w-lg text-base md:text-lg text-slate-600 mb-10 leading-relaxed">I'm a <span className="font-semibold">Computer Science: Software Engineering</span> senior at Louisiana State University. My expected graduation is <span className="font-semibold">May 2026</span> and I hope to be a <span className="font-semibold">Full Stack Developer.</span></p>
         <div className="animate-bounce"><div className="w-1 h-10 bg-gradient-to-b from-orange-500 to-transparent mx-auto rounded-full"></div></div>
       </section>
 
