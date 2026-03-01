@@ -117,7 +117,7 @@ export default function Home() {
   const navLinks = [
     { name: 'Home', href: '#hero' },
     { name: 'Education', href: '#education' },
-    { name: 'Certificates', href: '#certificates' },
+    { name: 'Certifications', href: '#certificates' },
     { name: 'Projects', href: '#projects' },
     { name: 'Game Projects', href: '#elective-projects' },
     { name: 'Volunteering', href: '#volunteering' }, 
