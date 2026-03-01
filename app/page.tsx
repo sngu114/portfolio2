@@ -74,7 +74,7 @@ export default function Home() {
     { 
       title: "Future Fugitive (3D Platformer Game)", 
       description: "3D platformer built using the Godot Engine and developed in C#. The game focuses on object-oriented design principles to create modular, reusable, and maintainable systems for player movement, physics interactions, and level mechanics.", 
-      image: "/eproject1.jpg", 
+      image: "/futurefugitive.gif", 
       link: "https://github.com/CSC-3380-Spring-2024/Team-6" 
     },
     { 
@@ -88,8 +88,8 @@ export default function Home() {
     },
     { 
       title: "Pesto: Judgement Day (Unity2D Platformer Game)", 
-      description: "Direct Sequel to 'Pesto: Rise of the Machines'. You play as Pesto, the famous penguin all grown up, equipped with an AK-47, a teleporter gun, and a tiny shotgun. Features enemy AIs, Scripting, and Physics.", 
-      image: "/eproject3.png", 
+      description: "Direct Sequel to 'Pesto: Rise of the Machines'. You play as Pesto, the famous penguin all grown up, equipped with an AK-47, a teleporter gun, and a tiny shotgun. Features enemy AIs, Scripting, and Physics. Created with Unity. Deployed on itch.io", 
+      image: "/pesto.gif", 
       link: "https://sngu114.itch.io/pesto-judgment-day", 
       linkText: "Play Game",
       isItch: true 
@@ -97,7 +97,7 @@ export default function Home() {
     { 
       title: "Golden Monk (Unity2D Platformer Game)", 
       description: "Simple 2D platformer game made with Unity. You play a Golden Monk that can shrink and also fight enemies. Deployed on itch.io.", 
-      image: "/eproject4.jpg", 
+      image: "/goldenmonk.gif", 
       link: "https://sngu114.itch.io/golden-monk", 
       linkText: "Play Game",
       isItch: true 
