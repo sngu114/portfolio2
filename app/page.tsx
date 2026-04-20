@@ -20,9 +20,11 @@ export default function Home() {
     {
       title: "Generative AI with Diffusion Models",
       organization: "Nvidia",
-      status: "In Progress",
+      status: "Completed",
       image: "/nvidia.png", 
-      description: "In this course, learners will take a deeper dive into denoising diffusion models, which are a popular choice for text-to-image pipelines"
+      description: "In this course, learners will take a deeper dive into denoising diffusion models, which are a popular choice for text-to-image pipelines.",
+      credentialId: "6YSchyAvQGWRCf1CJoKOIw",
+      credentialLink: "https://learn.nvidia.com/certificates?id=eboP-V9nRNGlqbbHLiBE6g#"
     },
   ];
 
@@ -179,8 +181,8 @@ export default function Home() {
                 left: i % 2 === 0 ? Math.random() * 40 + '%' : Math.random() * 40 + 60 + '%',
                 animationDelay: Math.random() * 10 + 's',
                 animationDuration: Math.random() * 2 + 3 + 's',
-                transform: 'rotate(-45deg)', // Fix: Set rotation on base state
-                opacity: 0 // Keep hidden until animation starts
+                transform: 'rotate(-45deg)',
+                opacity: 0
               }}
             />
           ))}
@@ -231,10 +233,14 @@ export default function Home() {
         {/* HERO SECTION */}
         <section id="hero" className="flex flex-col items-center justify-center min-h-screen px-4 text-center pt-24">
           <div className={`relative w-48 h-48 md:w-64 md:h-64 mb-8 rounded-full overflow-hidden ring-4 ring-orange-500 ring-offset-4 shadow-2xl transition-transform hover:scale-105 duration-300 ${isDarkMode ? 'ring-offset-slate-950' : 'ring-offset-white'}`}>
-            <img src="/me.jpg" alt="Steven Nguyen" className="object-cover w-full h-full" />
+            <img 
+              src={isDarkMode ? "/stevenDarkMode.png" : "/me.jpg"} 
+              alt="Steven Nguyen" 
+              className="object-cover w-full h-full" 
+            />
           </div>
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Hi, I'm <span className={isDarkMode ? 'text-orange-400' : 'text-orange-600'}>Steven</span></h1>
-          <p className={`max-w-lg text-base md:text-lg mb-10 leading-relaxed ${isDarkMode ? 'text-slate-400' : 'text-slate-600'}`}>I'm a <span className="font-semibold">Computer Science: Software Engineering</span> senior at Louisiana State University. My expected graduation is <span className="font-semibold">May 2026</span> and I hope to be a <span className="font-semibold">Full Stack Developer.</span></p>
+          <p className={`max-w-lg text-base md:text-lg mb-10 leading-relaxed ${isDarkMode ? 'text-slate-400' : 'text-slate-600'}`}>I'm a <span className="font-semibold">Computer Science: Software Engineering</span> senior at Louisiana State University. My expected graduation is <span className="font-semibold">May 2026</span> and I hope to be a <span className="font-semibold">Software Developer.</span></p>
           <div className="animate-bounce"><div className="w-1 h-10 bg-gradient-to-b from-orange-500 to-transparent mx-auto rounded-full"></div></div>
         </section>
 
@@ -281,6 +287,17 @@ export default function Home() {
                   </div>
                   <p className="text-orange-600 font-semibold text-base md:text-lg">{cert.organization}</p>
                   <p className={`mt-3 leading-relaxed text-sm md:text-base ${isDarkMode ? 'text-slate-400' : 'text-slate-600'}`}>{cert.description}</p>
+                  
+                  <div className="mt-4 flex flex-col gap-1 text-sm font-medium">
+                    <div className="flex items-center justify-center md:justify-start gap-2">
+                      <span className="text-slate-500">Credential ID: </span>
+                      <span className={isDarkMode ? 'text-slate-300' : 'text-slate-700'}>{cert.credentialId}</span>
+                    </div>
+                    <a href={cert.credentialLink} target="_blank" className="text-orange-600 hover:underline inline-flex items-center justify-center md:justify-start gap-1">
+                      View Certificate
+                      <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M14,3V5H17.59L7,15.59L8.41,17L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/></svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
@@ -333,7 +350,7 @@ export default function Home() {
         </section>
 
         {/* GAME PROJECTS SECTION */}
-        <section id="elective-projects" className={`max-w-6xl mx-auto px-6 py-24 border-t ${isDarkMode ? 'border-slate-800 bg-slate-900/20' : 'border-slate-50 bg-slate-50/50'}`}>
+        <section id="elective-projects" className={`max-w-6xl mx-auto px-6 py-24 border-t ${isDarkMode ? 'border-slate-800' : 'border-slate-50'}`}>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Game Projects</h2>
             <div className="h-1.5 w-20 bg-orange-600 mx-auto rounded-full"></div>
@@ -351,7 +368,6 @@ export default function Home() {
                   <div className="flex flex-wrap gap-4 mt-auto">
                     <a href={project.link} target="_blank" className="inline-flex items-center gap-2 font-semibold text-orange-600 hover:text-orange-700 transition-colors">
                       {project.linkText || "View Project"}
-                      {/* Logic to show correct icon for game projects */}
                       {project.isVideo ? (
                         <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M21,12L9,21V3L21,12M7,3V21H5V3H7Z" /></svg>
                       ) : project.isItch ? (
@@ -360,7 +376,6 @@ export default function Home() {
                         <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12" /></svg>
                       )}
                     </a>
-                    {/* Optional second link if project has a separate githubLink */}
                     {project.githubLink && (
                       <a href={project.githubLink} target="_blank" className="inline-flex items-center gap-2 font-semibold text-orange-600 hover:text-orange-700 transition-colors">
                         View Code
@@ -412,8 +427,9 @@ export default function Home() {
           </div>
         </section>
 
+        {/* FOOTER */}
         <footer className={`py-12 text-center border-t transition-colors ${isDarkMode ? 'text-slate-500 border-slate-900' : 'text-slate-400 border-slate-100'}`}>
-          <p className="text-xs md:text-sm">© {new Date().getFullYear()} Steven Nguyen. Last Updated: 2/28/26.</p>
+          <p className="text-xs md:text-sm">© {new Date().getFullYear()} Steven Nguyen. Last Updated: 4/20/26.</p>
         </footer>
       </div>
 
