@@ -128,7 +128,7 @@ export default function Home() {
 
   const SocialIcons = () => (
     <>
-      <a href="/Steven Nguyen Resume 12-19-25.pdf" target="_blank" className="text-slate-400 hover:text-orange-600 transition-colors" title="Resume">
+      <a href="/Steven Nguyen Resume 4-20-26.pdf" target="_blank" className="text-slate-400 hover:text-orange-600 transition-colors" title="Resume">
         <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" /></svg>
       </a>
       <a href="https://www.linkedin.com/in/steven-nguyen-a7017132a/" target="_blank" className="text-slate-400 hover:text-orange-600 transition-colors" title="LinkedIn">
